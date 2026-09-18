@@ -1,0 +1,263 @@
+
+# 避免本地连接自动断开
+Host *
+    ServerAliveInterval 60
+    ControlMaster auto
+    ControlPath ~/.ssh/%h-%p-%r
+    ControlPersist yes
+
+#Host *
+#    RemoteForward 7897 localhost:7897
+#    RemoteForward 7897 localhost:7897
+
+
+HOST remote-dev
+    hostname authoring-ssh-cneast292.gaoxinai.com
+    port 31161
+    user ma-user
+    IdentityFile /Users/jackie/Downloads/KeyPair-liyichao.pem
+    StrictHostKeyChecking no
+
+#Host psirobot-huoshanyun
+#    HostName 118.196.25.1
+#    User liyichao
+#    Port 22
+
+#Host jump-server-js
+#    HostName 36.103.180.140 
+#    User liyichao
+
+#Host psirobot-jinshanyun-hgx-8
+#    HostName hgx-8
+#    User liyichao
+#    ProxyJump jump-server-js
+
+#Host psirobot-jinshanyun-hgx-9
+#    HostName hgx-9
+#    User liyichao
+#    ProxyJump jump-server
+
+#Host jump-server-tx
+#    HostName 134.175.121.223
+#    User liyichao
+#    ForwardX11 yes
+#    ForwardX11Trusted yes
+#    ForwardAgent yes
+
+# PzRTFtMRRdK7
+#Host tx-pro-14
+#    HostName pro-14
+#    User liyichao
+#    ForwardX11 yes
+#    ForwardX11Trusted yes
+#    ForwardAgent yes
+#    ProxyJump jump-server-tx
+
+#Host tx-pro-15
+#    HostName pro-15
+#    User liyichao
+#    ProxyJump jump-server-tx
+
+#Host tx-pro-16
+#    HostName pro-16
+#    User liyichao
+#    ProxyJump jump-server-tx
+
+#Host tx-pro-17
+#    HostName pro-17
+#    User liyichao
+#    ProxyJump jump-server-tx
+
+#Host tx-pro-18
+#    HostName pro-18
+#    User liyichao
+#    ProxyJump jump-server-tx
+
+#Host tx-pro-24
+#    HostName pro-24
+#    User liyichao
+#    ProxyJump jump-server-tx
+
+# ywxQ4RFX2fQs
+Host tx-srv-01
+    HostName srv-01
+    User psibot
+    ProxyJump jump-server-tx
+    ForwardX11 yes
+    ForwardX11Trusted yes
+    ForwardAgent yes
+
+Host robot-1
+    HostName robot-1
+    User robot
+    ForwardX11 yes
+    ForwardX11Trusted yes
+    ForwardAgent yes
+
+Host robot-2
+    HostName robot-2
+    User robot
+    ForwardX11 yes
+    ForwardX11Trusted yes
+    ForwardAgent yes
+
+Host bj-dy-4090
+    HostName dy-4090
+    User robot
+    ForwardX11 yes
+    ForwardX11Trusted yes
+    ForwardAgent yes
+
+# desc2022
+Host --------------------------------desc-System-Product-Name
+    HostName desc-System-Product-Name
+    Port 22
+    User desc
+    ForwardX11 yes
+    ForwardX11Trusted yes
+    ForwardAgent yes
+
+# psibot2025
+Host bj-bj01-ds01
+    HostName bj01-ds01
+    Port 10051
+    User psibot
+    ForwardX11 yes
+    ForwardX11Trusted yes
+    ForwardAgent yes
+
+# 123456
+Host bj-bj02-dc01
+    HostName bj02-dc01
+    Port 22
+    User psibot
+    ForwardX11 yes
+    ForwardX11Trusted yes
+    ForwardAgent yes
+
+
+# nHdM3TpbU4ep
+# Jp4YncqJmY9hJK3Uxz3udYPDetNl0yrG
+#Host pro-24
+#    HostName 118.89.130.182
+#    User liyichao@tTeirCTeeNaO7QPY
+#    Port 8322
+
+# dwSLeZ7fWakLgdG9HsflvFYox2WFZixn
+#Host pro-46
+#    HostName 118.89.130.182
+#    User liyichao@IwJNtFABEZvMA8PC
+#    Port 8322
+
+
+#ssh -p 10666 root@42.192.34.154
+Host tione-develop
+    HostName 42.192.34.154
+    User root
+    Port 10666
+    ForwardX11 yes
+    ForwardX11Trusted yes
+    ForwardAgent yes
+    RemoteForward 17897 127.0.0.1:7897
+    ExitOnForwardFailure yes
+
+#ssh -p 11179 root@42.192.34.154
+Host psi_motus_2_for_liyichao
+    HostName 42.192.34.154
+    User root
+    Port 11179
+    ForwardX11 yes
+    ForwardX11Trusted yes
+    ForwardAgent yes
+    RemoteForward 17897 127.0.0.1:7897
+    ExitOnForwardFailure yes
+
+#ssh -p 10976 root@42.192.34.154#
+Host tione-develop-4090
+    HostName 42.192.34.154
+    User root
+    Port 10976
+    ForwardX11 yes
+    ForwardX11Trusted yes
+    ForwardAgent yes
+    RemoteForward 17897 127.0.0.1:7897
+    ExitOnForwardFailure yes
+
+
+#ssh -p 10693 root@42.192.34.154
+Host tione-develop-5880
+    HostName 42.192.34.154
+    User root
+    Port 10693
+    ForwardX11 yes
+    ForwardX11Trusted yes
+    ForwardAgent yes
+    RemoteForward 17897 127.0.0.1:7897
+    ExitOnForwardFailure yes
+
+
+# QIZ9m3kDCLTaOhlgIOVfchMQFHfWEVmQ ext-222798c20d-7ac8-1
+Host data-server-01
+    HostName 118.89.130.182
+    User liyichao@qrOhBZbNCmxq7YKX
+    Port 8322
+
+# j6a0zA875MrFvS4eTysTbZeqXor1FSft ext-22127c8762-48f0-1
+Host pro-24
+    HostName 118.89.130.182
+    User liyichao@JW6Bj8wxLmlcPISF
+    Port 8322
+
+# bzvMKNBePzEfltu9FVspJqkB76DDMBxp ext-2203077e6a-a860-1
+Host rerun-prod-01
+    HostName 118.89.130.182
+    User liyichao@gSdXHOd8WMt0flDZ
+    Port 8322
+
+# SfJpQBAHPrTA1XAspBUJWVM0P0g78pUK ext-22030724c3-0220-1
+Host datahub-prod-01
+    HostName 118.89.130.182
+    User liyichao@lX7dKonu3KGxyJpn
+    Port 8322
+    
+# FpvfGmAbAKD0g13BxOG6eiSaKYzhV3ca
+Host datahub-prod-02
+    HostName 118.89.130.182
+    User liyichao@st35kVbfnG3uVcla
+    Port 8322
+
+# vr5FPIl2byanLlMBk8TTNOifLbDBN4LM ext-22030724c3-0220-1
+Host rerun-test-01
+    HostName 118.89.130.182
+    User liyichao@sM1Jro7ztIB6eYyX
+    Port 8322
+
+#123456
+Host t1
+  HostName 172.16.1.117
+  User psibot
+ 
+
+# OqUvvyDb6OnpIMh94L1h2St8wEMZRJQF ext-21df2e4749-5940-1
+Host datahub-test-01
+    HostName 118.89.130.182
+    User liyichao@nRShUSsROMPz3pS0
+    Port 8322
+
+Host 172.16.6.18
+    HostName 172.16.6.18
+    User psibot
+    Port 22
+    ForwardX11 yes
+    ForwardX11Trusted yes
+    ForwardAgent yes
+
+
+
+
+
+# ins-55hc4gh5 pro-46-tione
+ 	
+# ins-bz7e2coz pro-12-tione
+
+# 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
